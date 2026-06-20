@@ -15,6 +15,14 @@ FastAPI voice bot using Azure OpenAI speech and chat APIs with ACS WhatsApp Even
 
 FastAPI voice bot using Azure OpenAI speech and chat APIs with ACS WhatsApp Event Grid integration.
 
+## 📖 The Story
+
+Voicebot v2 explores a more modular route to the same conversational goal. The project combines Azure OpenAI speech and chat APIs with LangChain and FAISS, retaining local retrieval while adding Azure Communication Services event handling.
+
+A customer message can arrive as text or audio. The API normalizes the input, obtains relevant context, generates an answer, and returns text or synthesized media. Event Grid routes extend that loop to ACS-backed WhatsApp workflows.
+
+This iteration is useful as an integration laboratory. Its future direction is to remove duplicate Python and Node responsibilities, formalize event schemas, and add contract tests for every external service boundary.
+
 ## Highlights
 
 - Text conversation endpoint
@@ -96,4 +104,5 @@ This is a learning and reference implementation. Review security, validation, mo
 - Define retention and privacy controls for audio and customer data.
 
 > This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
+
 
